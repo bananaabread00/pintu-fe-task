@@ -54,6 +54,7 @@ function EnhancedTableHead<T>(props: EnhancedTableProps<T>) {
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id as string}
+            sx={{ py: 4 }}
             sortDirection={orderBy === headCell.id ? order : false}
           >
             {headCell.sortable ? (
@@ -110,7 +111,11 @@ function SortableTable<T>(props: SortableTableProps<T>) {
               {stableSort(tableData, getComparator(order, orderBy)).map((row, index) => (
                 <TableRow key={index}>
                   {headCells.map((column) => (
-                    <TableCell key={column.id as string} align={column.align || 'left'}>
+                    <TableCell
+                      key={column.id as string}
+                      sx={{ py: 3 }}
+                      align={column.align || 'left'}
+                    >
                       {column.render ? column.render(row) : defaultRender(row[column.id])}
                     </TableCell>
                   ))}
