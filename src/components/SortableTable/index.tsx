@@ -84,9 +84,7 @@ function SortableTable<T>(props: SortableTableProps<T>) {
   const { headCells, tableData } = props;
 
   const [order, setOrder] = React.useState<Order>('asc');
-  const [orderBy, setOrderBy] = React.useState<keyof T>(
-    headCells.filter((item) => item.sortable)[0].id
-  );
+  const [orderBy, setOrderBy] = React.useState<keyof T | undefined>();
 
   const handleRequestSort = (event: React.MouseEvent<unknown>, property: keyof T) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -108,19 +106,33 @@ function SortableTable<T>(props: SortableTableProps<T>) {
               headCells={headCells}
             />
             <TableBody>
-              {stableSort(tableData, getComparator(order, orderBy)).map((row, index) => (
-                <TableRow key={index}>
-                  {headCells.map((column) => (
-                    <TableCell
-                      key={column.id as string}
-                      sx={{ py: 3 }}
-                      align={column.align || 'left'}
-                    >
-                      {column.render ? column.render(row) : defaultRender(row[column.id])}
-                    </TableCell>
+              {orderBy
+                ? stableSort(tableData, getComparator(order, orderBy)).map((row, index) => (
+                    <TableRow key={index}>
+                      {headCells.map((column) => (
+                        <TableCell
+                          key={column.id as string}
+                          sx={{ py: 3 }}
+                          align={column.align || 'left'}
+                        >
+                          {column.render ? column.render(row) : defaultRender(row[column.id])}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  ))
+                : tableData.map((row, index) => (
+                    <TableRow key={index}>
+                      {headCells.map((column) => (
+                        <TableCell
+                          key={column.id as string}
+                          sx={{ py: 3 }}
+                          align={column.align || 'left'}
+                        >
+                          {column.render ? column.render(row) : defaultRender(row[column.id])}
+                        </TableCell>
+                      ))}
+                    </TableRow>
                   ))}
-                </TableRow>
-              ))}
             </TableBody>
           </Table>
         </TableContainer>

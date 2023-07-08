@@ -11,7 +11,7 @@ export type Order = 'asc' | 'desc';
 export interface EnhancedTableProps<T> {
   onRequestSort: (event: React.MouseEvent<unknown>, property: keyof T) => void;
   order: Order;
-  orderBy: keyof T;
+  orderBy?: keyof T;
   headCells: HeadCell<T>[];
 }
 
