@@ -54,7 +54,7 @@ function EnhancedTableHead<T>(props: EnhancedTableProps<T>) {
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id as string}
-            sx={{ py: 4 }}
+            sx={{ py: 4, fontSize: '1rem' }}
             sortDirection={orderBy === headCell.id ? order : false}
           >
             {headCell.sortable ? (
@@ -63,15 +63,10 @@ function EnhancedTableHead<T>(props: EnhancedTableProps<T>) {
                 direction={orderBy === headCell.id ? order : 'asc'}
                 onClick={createSortHandler(headCell.id)}
               >
-                {headCell.label}
-                {orderBy === headCell.id ? (
-                  <Box component="span" sx={visuallyHidden}>
-                    {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                  </Box>
-                ) : null}
+                <span className="text-gray-600">{headCell.label}</span>
               </TableSortLabel>
             ) : (
-              <span>{headCell.label}</span>
+              <span className="text-gray-600">{headCell.label}</span>
             )}
           </TableCell>
         ))}
@@ -92,6 +87,7 @@ function SortableTable<T>(props: SortableTableProps<T>) {
     setOrderBy(property);
   };
 
+  const rows = orderBy ? stableSort(tableData, getComparator(order, orderBy)) : tableData;
   const defaultRender = (value: any) => <span>{value}</span>;
 
   return (
@@ -106,33 +102,21 @@ function SortableTable<T>(props: SortableTableProps<T>) {
               headCells={headCells}
             />
             <TableBody>
-              {orderBy
-                ? stableSort(tableData, getComparator(order, orderBy)).map((row, index) => (
-                    <TableRow key={index}>
-                      {headCells.map((column) => (
-                        <TableCell
-                          key={column.id as string}
-                          sx={{ py: 3 }}
-                          align={column.align || 'left'}
-                        >
-                          {column.render ? column.render(row) : defaultRender(row[column.id])}
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  ))
-                : tableData.map((row, index) => (
-                    <TableRow key={index}>
-                      {headCells.map((column) => (
-                        <TableCell
-                          key={column.id as string}
-                          sx={{ py: 3 }}
-                          align={column.align || 'left'}
-                        >
-                          {column.render ? column.render(row) : defaultRender(row[column.id])}
-                        </TableCell>
-                      ))}
-                    </TableRow>
+              {rows.map((row, index) => (
+                <TableRow key={index}>
+                  {headCells.map((column) => (
+                    <TableCell
+                      key={column.id as string}
+                      sx={{ py: 3, fontSize: '1rem' }}
+                      align={column.align || 'left'}
+                    >
+                      {column.render
+                        ? column.render(row[column.id], row)
+                        : defaultRender(row[column.id])}
+                    </TableCell>
                   ))}
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </TableContainer>

@@ -31,6 +31,7 @@ export type CurrencyWallet = {
 };
 
 export interface TokenList {
+  logo: string;
   crypto: Crypto;
   price: TokenPrice;
   day: string;
@@ -40,7 +41,6 @@ export interface TokenList {
 }
 
 export type Crypto = {
-  logo: string;
   name: string;
   symbol: string;
 };
@@ -49,13 +49,3 @@ export type TokenPrice = {
   currentPrice: string;
   prevPrice: string;
 };
-
-// export type
-// {
-//     "pair": "storj/idr",
-//     "latestPrice": "5419",
-//     "day": "-5.48",
-//     "week": "25.50",
-//     "month": "34.33",
-//     "year": "-48.53"
-// }

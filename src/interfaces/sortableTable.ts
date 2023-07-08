@@ -2,7 +2,7 @@ export interface HeadCell<T> {
   id: keyof T;
   label: string;
   align?: 'center' | 'right' | 'left' | 'inherit' | 'justify';
-  render?: (row: T) => React.ReactElement;
+  render?: (value: any, row: T) => React.ReactElement;
   sortable?: boolean;
 }
 
