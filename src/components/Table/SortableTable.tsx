@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 import Paper from '@mui/material/Paper';
-import { EnhancedTableProps, Order, SortableTableProps } from '../../interfaces/sortableTable';
+import { EnhancedSortableTableProps, Order, SortableTableProps } from '../../interfaces/table';
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
   if (b[orderBy] < a[orderBy]) {
@@ -41,7 +41,7 @@ function stableSort<T>(array: T[], comparator: (a: T, b: T) => number) {
   return stabilizedThis.map((el) => el[0]) as T[];
 }
 
-function EnhancedTableHead<T>(props: EnhancedTableProps<T>) {
+function EnhancedTableHead<T>(props: EnhancedSortableTableProps<T>) {
   const { order, orderBy, onRequestSort, headCells } = props;
   const createSortHandler = (property: keyof T) => (event: React.MouseEvent<unknown>) => {
     onRequestSort(event, property);

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useQuery } from 'react-query';
 import * as MarketInterface from '../../interfaces/market';
-import { HeadCell } from '../../interfaces/sortableTable';
+import { HeadCell } from '../../interfaces/table';
 import getSupportedCurrencies from '../../services/getSupportedCurrencies';
 import { ApiResponse } from '../../interfaces/api';
 import getPriceChanges from '../../services/getPriceChanges';
@@ -53,7 +53,7 @@ const headCells: HeadCell<MarketInterface.TokenList>[] = [
   {
     id: 'crypto',
     label: 'CRYPTO',
-    render: (value: MarketInterface.Crypto, row: MarketInterface.TokenList) => (
+    render: (value: MarketInterface.Crypto) => (
       <div className="flex flex-col lg:flex-row ">
         <div className="basis-3/4 font-bold"> {value.name} </div>
         <div className="text-slate-400">{value.symbol}</div>
@@ -104,6 +104,7 @@ const headCells: HeadCell<MarketInterface.TokenList>[] = [
 const useMarket = () => {
   const [tokenList, setTokenList] = useState<MarketInterface.TokenList[]>([]);
   const [refresh, setRefresh] = useState(Date.now());
+  const [selection, setSelection] = useState<Partial<keyof MarketInterface.TokenList>>('day');
   const prevPriceDataRef = useRef<MarketInterface.PriceChangesRes[]>([]);
 
   const { data: getSupportedCurrenciesData } = useQuery<
@@ -121,6 +122,45 @@ const useMarket = () => {
       onError: (err) => console.error('error fetch getPriceChanges', err)
     }
   );
+
+  const headCellsDropdown: HeadCell<MarketInterface.TokenList>[] = [
+    {
+      id: 'crypto',
+      label: 'CRYPTO',
+      render: (value: MarketInterface.Crypto, row: MarketInterface.TokenList) => (
+        <div className="flex items-center gap-4">
+          <TokenLogo logoUrl={row.logo.url.replace(/^https?:\/\//, '')} color={row.logo.color} />
+          <div className="flex flex-col">
+            <div className="basis-3/4 font-bold"> {value.name} </div>
+            <div className="text-slate-400">{value.symbol}</div>
+          </div>
+        </div>
+      ),
+      main: true
+    },
+    {
+      id: 'price',
+      label: 'HARGA',
+      sortable: true,
+      align: 'right',
+      render: (value: number, row: MarketInterface.TokenList) => {
+        return (
+          <div className="flex flex-col items-end">
+            <PriceChange
+              key={row.crypto.name + '-' + value}
+              price={formatPrice(value)}
+              initialColor={mapPriceColor(Number(row.prevPrice), Number(value))}
+            />
+            {renderPricePercentage(row[selection] as number)}
+          </div>
+        );
+      }
+    }
+  ];
+
+  const handleSelectionChange = (selection: keyof MarketInterface.TokenList) => {
+    setSelection(selection);
+  };
 
   const handleTokenData = useCallback(() => {
     const transformData = (
@@ -169,7 +209,9 @@ const useMarket = () => {
 
   return {
     headCells,
-    tokenList
+    tokenList,
+    headCellsDropdown,
+    handleSelectionChange
   };
 };
 
