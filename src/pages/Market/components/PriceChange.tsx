@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 interface Props {
   price: string;
@@ -17,7 +17,7 @@ const PriceChange = (props: Props) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, [price, initialColor]);
+  }, []);
 
   return (
     <span className={`text-${textColor}-600 transition-color duration-1000 font-bold`}>

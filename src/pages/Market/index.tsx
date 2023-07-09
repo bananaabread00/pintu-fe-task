@@ -40,6 +40,13 @@ const renderPricePercentage = (percentage: string) => {
   }
 };
 
+const mapPriceColor = (prevPrice: number, curPrice: number) => {
+  const margin = curPrice - prevPrice;
+  if (margin < 0) return 'red';
+  else if (margin > 0) return 'green';
+  else return 'black';
+};
+
 const headCells: HeadCell<TokenList>[] = [
   {
     id: 'logo',
@@ -65,18 +72,11 @@ const headCells: HeadCell<TokenList>[] = [
     label: 'HARGA',
     sortable: true,
     render: (value: TokenPrice, row: TokenList) => {
-      // todo: fix this
-      return Number(value.prevPrice) < Number(value.currentPrice) ? (
+      return (
         <PriceChange
-          key={value.currentPrice}
+          key={row.crypto.name + '-' + value.currentPrice}
           price={formatPrice(value.currentPrice)}
-          initialColor={'green'}
-        />
-      ) : (
-        <PriceChange
-          key={value.currentPrice}
-          price={formatPrice(value.currentPrice)}
-          initialColor={'red'}
+          initialColor={mapPriceColor(Number(value.prevPrice), Number(value.currentPrice))}
         />
       );
     }
