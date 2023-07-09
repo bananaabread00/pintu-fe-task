@@ -8,7 +8,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 import Paper from '@mui/material/Paper';
-import { visuallyHidden } from '@mui/utils';
 import { EnhancedTableProps, Order, SortableTableProps } from '../../interfaces/sortableTable';
 
 function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
@@ -107,7 +106,7 @@ function SortableTable<T>(props: SortableTableProps<T>) {
                   {headCells.map((column) => (
                     <TableCell
                       key={column.id as string}
-                      sx={{ py: 3, fontSize: '1rem' }}
+                      sx={{ py: 3, fontSize: '1rem', width: column.width }}
                       align={column.align || 'left'}
                     >
                       {column.render

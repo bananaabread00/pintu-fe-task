@@ -31,21 +31,22 @@ export type CurrencyWallet = {
 };
 
 export interface TokenList {
-  logo: string;
+  logo: TokenLogo;
   crypto: Crypto;
-  price: TokenPrice;
-  day: string;
-  week: string;
-  month: string;
-  year: string;
+  price: number;
+  prevPrice: number;
+  day: number;
+  week: number;
+  month: number;
+  year: number;
 }
+
+export type TokenLogo = {
+  url: string;
+  color: string;
+};
 
 export type Crypto = {
   name: string;
   symbol: string;
-};
-
-export type TokenPrice = {
-  currentPrice: string;
-  prevPrice: string;
 };

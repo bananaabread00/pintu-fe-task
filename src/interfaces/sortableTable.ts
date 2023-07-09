@@ -4,6 +4,7 @@ export interface HeadCell<T> {
   align?: 'center' | 'right' | 'left' | 'inherit' | 'justify';
   render?: (value: any, row: T) => React.ReactElement;
   sortable?: boolean;
+  width?: number;
 }
 
 export type Order = 'asc' | 'desc';

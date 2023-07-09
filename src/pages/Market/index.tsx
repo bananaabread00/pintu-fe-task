@@ -1,21 +1,16 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useQuery } from 'react-query';
 import SortableTable from '../../components/SortableTable';
-import {
-  Crypto,
-  PriceChangesRes,
-  SupportedCurrenciesRes,
-  TokenList,
-  TokenPrice
-} from '../../interfaces/market';
+import * as MarketInterface from '../../interfaces/market';
 import { HeadCell } from '../../interfaces/sortableTable';
 import getSupportedCurrencies from '../../services/getSupportedCurrencies';
 import { ApiResponse } from '../../interfaces/api';
 import getPriceChanges from '../../services/getPriceChanges';
 import formatPrice from '../../shared/functions/formatPrice';
 import PriceChange from './components/PriceChange';
+import TokenLogo from './components/TokenLogo';
 
-const renderPricePercentage = (percentage: string) => {
+const renderPricePercentage = (percentage: string | number) => {
   const numPercentage = Number(percentage);
   if (numPercentage < 0) {
     return (
@@ -47,21 +42,20 @@ const mapPriceColor = (prevPrice: number, curPrice: number) => {
   else return 'black';
 };
 
-const headCells: HeadCell<TokenList>[] = [
+const headCells: HeadCell<MarketInterface.TokenList>[] = [
   {
     id: 'logo',
     label: '',
-    render: (value: string) => (
-      <div className="svg-container" style={{ color: 'red' }}>
-        <img src={value} className="svg-image" />
-      </div>
-    )
+    render: (value: MarketInterface.TokenLogo) => (
+      <TokenLogo logoUrl={value.url.replace(/^https?:\/\//, '')} color={value.color} />
+    ),
+    width: 60
   },
   {
     id: 'crypto',
     label: 'CRYPTO',
-    render: (value: Crypto, row: TokenList) => (
-      <div className="flex flex-col md:flex-row ">
+    render: (value: MarketInterface.Crypto, row: MarketInterface.TokenList) => (
+      <div className="flex flex-col lg:flex-row ">
         <div className="basis-3/4 font-bold"> {value.name} </div>
         <div className="text-slate-400">{value.symbol}</div>
       </div>
@@ -71,15 +65,16 @@ const headCells: HeadCell<TokenList>[] = [
     id: 'price',
     label: 'HARGA',
     sortable: true,
-    render: (value: TokenPrice, row: TokenList) => {
+    render: (value: number, row: MarketInterface.TokenList) => {
       return (
         <PriceChange
-          key={row.crypto.name + '-' + value.currentPrice}
-          price={formatPrice(value.currentPrice)}
-          initialColor={mapPriceColor(Number(value.prevPrice), Number(value.currentPrice))}
+          key={row.crypto.name + '-' + value}
+          price={formatPrice(value)}
+          initialColor={mapPriceColor(Number(row.prevPrice), Number(value))}
         />
       );
-    }
+    },
+    width: 250
   },
   {
     id: 'day',
@@ -108,16 +103,16 @@ const headCells: HeadCell<TokenList>[] = [
 ];
 
 function Market() {
-  const [tokenList, setTokenList] = useState<TokenList[]>([]);
+  const [tokenList, setTokenList] = useState<MarketInterface.TokenList[]>([]);
   const [refresh, setRefresh] = useState(Date.now());
-  const prevPriceDataRef = useRef<PriceChangesRes[]>([]);
+  const prevPriceDataRef = useRef<MarketInterface.PriceChangesRes[]>([]);
 
   const {
     data: getSupportedCurrenciesData,
     isLoading,
     isError: isErrorGetSupportedCurrencies,
     error: errorGetSupportedCurrencies
-  } = useQuery<ApiResponse<SupportedCurrenciesRes[]>>(
+  } = useQuery<ApiResponse<MarketInterface.SupportedCurrenciesRes[]>>(
     'supportedCurrencies',
     getSupportedCurrencies
   );
@@ -126,16 +121,16 @@ function Market() {
     data: getPriceChangesData,
     isError: isErrorGetPriceChanges,
     error: errorGetPriceChanges
-  } = useQuery<ApiResponse<PriceChangesRes[]>>('priceChanges', getPriceChanges, {
+  } = useQuery<ApiResponse<MarketInterface.PriceChangesRes[]>>('priceChanges', getPriceChanges, {
     refetchInterval: 2000,
     onSuccess: () => setRefresh(Date.now())
   });
 
   const handleTokenData = useCallback(() => {
     const transformData = (
-      supportedCurrencies: SupportedCurrenciesRes[],
-      priceChanges: PriceChangesRes[]
-    ): TokenList[] => {
+      supportedCurrencies: MarketInterface.SupportedCurrenciesRes[],
+      priceChanges: MarketInterface.PriceChangesRes[]
+    ): MarketInterface.TokenList[] => {
       return (
         supportedCurrencies.map((currency) => {
           const priceInfo = priceChanges.find(
@@ -146,21 +141,19 @@ function Market() {
           );
           if (priceInfo && priceInfo.day !== '0.00')
             return {
-              logo: currency.logo,
+              logo: { url: currency.logo, color: currency.color },
               crypto: {
                 name: currency.name,
                 symbol: currency.currencySymbol
               },
-              price: {
-                currentPrice: priceInfo.latestPrice,
-                prevPrice: prevPriceInfo?.latestPrice || ''
-              },
-              day: priceInfo.day,
-              week: priceInfo.week,
-              month: priceInfo.month,
-              year: priceInfo.year
+              price: Number(priceInfo.latestPrice),
+              prevPrice: Number(prevPriceInfo?.latestPrice),
+              day: Number(priceInfo.day),
+              week: Number(priceInfo.week),
+              month: Number(priceInfo.month),
+              year: Number(priceInfo.year)
             };
-          else return {} as TokenList;
+          else return {} as MarketInterface.TokenList;
         }) || []
       );
     };
@@ -180,7 +173,7 @@ function Market() {
 
   return (
     <div className="App">
-      <div className="container mx-auto my-8 px-8">
+      <div className="container max-w-screen-xl mx-auto my-10 lg:px-10 px-4">
         <h1 className="text-3xl font-bold text-black-500 my-8">
           Harga Crypto dalam Rupiah Hari Ini
         </h1>
