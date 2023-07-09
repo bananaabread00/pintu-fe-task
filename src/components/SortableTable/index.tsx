@@ -62,10 +62,10 @@ function EnhancedTableHead<T>(props: EnhancedTableProps<T>) {
                 direction={orderBy === headCell.id ? order : 'asc'}
                 onClick={createSortHandler(headCell.id)}
               >
-                <span className="text-gray-600">{headCell.label}</span>
+                <span className="text-gray-600 text-center">{headCell.label}</span>
               </TableSortLabel>
             ) : (
-              <span className="text-gray-600">{headCell.label}</span>
+              <span className="text-gray-600 text-center">{headCell.label}</span>
             )}
           </TableCell>
         ))}
@@ -92,8 +92,8 @@ function SortableTable<T>(props: SortableTableProps<T>) {
   return (
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
-        <TableContainer>
-          <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle" size="medium">
+        <TableContainer sx={{ maxHeight: '85vh' }}>
+          <Table stickyHeader sx={{ minWidth: 750 }} aria-labelledby="tableTitle" size="medium">
             <EnhancedTableHead
               order={order}
               orderBy={orderBy}
