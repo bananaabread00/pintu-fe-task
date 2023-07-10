@@ -25,7 +25,7 @@ describe('Market Page', () => {
         <Market />
       </QueryClientProvider>
     );
-    expect((await screen.findAllByText('Bitcoin')).length).toBe(2);
+    expect((await screen.findAllByText('Bitcoin')).length).toBe(3);
     expect(container).toMatchSnapshot();
   });
 });

@@ -1,13 +1,14 @@
 import React from 'react';
 import SortableTable from '../../components/Table/SortableTable';
-import useMarket from './useMarket';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import DropdownTable from '../../components/Table/DropdownTable';
 import { tokenDropdownList } from './marketConstants';
+import TopMoversCard from './components/TopMoversCard';
+import useMarket from './useMarket';
 
 function Market() {
-  const { headCells, tokenList, headCellsDropdown, handleSelectionChange } = useMarket();
+  const { headCells, tokenList, topMovers, headCellsDropdown, handleSelectionChange } = useMarket();
 
   return (
     <div className="App">
@@ -17,6 +18,18 @@ function Market() {
         </h1>
         {tokenList.length ? (
           <>
+            <strong className="text-lg">🔥 Top Movers (24 Jam)</strong>
+            <div className="flex overflow-x-auto gap-4">
+              {topMovers.map((item) => (
+                <TopMoversCard
+                  key={item.crypto.name}
+                  price={item.price}
+                  crypto={item.crypto}
+                  day={item.day}
+                  logo={item.logo}
+                />
+              ))}
+            </div>
             <div className="hidden md:block">
               <SortableTable headCells={headCells} tableData={tokenList} />
             </div>

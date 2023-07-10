@@ -8,31 +8,7 @@ import getPriceChanges from '../../services/getPriceChanges';
 import formatPrice from '../../utils/formatPrice';
 import PriceChange from './components/PriceChange';
 import TokenLogo from './components/TokenLogo';
-
-const renderPricePercentage = (percentage: string | number) => {
-  const numPercentage = Number(percentage);
-  if (numPercentage < 0) {
-    return (
-      <div className="flex items-center gap-2">
-        <div className="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600" />
-        <span className="font-semibold text-red-600">{Math.abs(numPercentage)}%</span>
-      </div>
-    );
-  } else if (numPercentage > 0) {
-    return (
-      <div className="flex items-center gap-2">
-        <div className="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600" />
-        <span className="font-semibold text-green-600">{Math.abs(numPercentage)}%</span>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <span className="font-semibold">{Math.abs(numPercentage)}%</span>
-      </div>
-    );
-  }
-};
+import renderPricePercentage from './utils/renderPricePercentage';
 
 const mapPriceColor = (prevPrice: number, curPrice: number) => {
   const margin = curPrice - prevPrice;
@@ -103,6 +79,7 @@ const headCells: HeadCell<MarketInterface.TokenList>[] = [
 
 const useMarket = () => {
   const [tokenList, setTokenList] = useState<MarketInterface.TokenList[]>([]);
+  const [topMovers, setTopMovers] = useState<MarketInterface.TokenList[]>([]);
   const [refresh, setRefresh] = useState(Date.now());
   const [selection, setSelection] = useState<Partial<keyof MarketInterface.TokenList>>('day');
   const prevPriceDataRef = useRef<MarketInterface.PriceChangesRes[]>([]);
@@ -199,6 +176,12 @@ const useMarket = () => {
         getPriceChangesData.payload
       );
       setTokenList(transformedData.filter((item) => item.crypto));
+      setTopMovers(
+        transformedData
+          .filter((item) => item.crypto)
+          .sort((a, b) => Math.abs(b.day) - Math.abs(a.day))
+          .slice(0, 6)
+      );
     }
   }, [getPriceChangesData, getSupportedCurrenciesData]);
 
@@ -210,6 +193,7 @@ const useMarket = () => {
   return {
     headCells,
     tokenList,
+    topMovers,
     headCellsDropdown,
     handleSelectionChange
   };
