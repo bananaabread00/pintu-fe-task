@@ -1,3 +1,4 @@
+import React from 'react';
 import { HeadCell } from '../../../../interfaces/table';
 
 interface DessertList {
@@ -6,10 +7,11 @@ interface DessertList {
   fat: number;
 }
 
-export const headCells: HeadCell<DessertList>[] = [
+export const sortableHeadCells: HeadCell<DessertList>[] = [
   {
     id: 'name',
-    label: 'Dessert'
+    label: 'Dessert',
+    render: (value) => <strong>{value}</strong>
   },
   {
     id: 'calories',
@@ -21,6 +23,18 @@ export const headCells: HeadCell<DessertList>[] = [
     label: 'Fat (g)',
     sortable: true,
     width: 250
+  }
+];
+
+export const dropdownHeadCells: HeadCell<DessertList>[] = [
+  {
+    id: 'name',
+    label: 'Dessert',
+    main: true
+  },
+  {
+    id: 'calories',
+    label: 'Calories'
   }
 ];
 
@@ -40,4 +54,9 @@ export const tableData = [
     calories: 235,
     fat: 98
   }
+];
+
+export const dropdownList = [
+  { key: 'calories', label: 'Calories' },
+  { key: 'fat', label: 'Fat (g)' }
 ];

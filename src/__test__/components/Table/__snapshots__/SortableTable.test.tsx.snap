@@ -96,9 +96,9 @@ exports[`SortableTable component test should render the table 1`] = `
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
               >
-                <span>
+                <strong>
                   Frozen yoghurt
-                </span>
+                </strong>
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
@@ -121,9 +121,9 @@ exports[`SortableTable component test should render the table 1`] = `
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
               >
-                <span>
+                <strong>
                   Ice cream
-                </span>
+                </strong>
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
@@ -146,9 +146,9 @@ exports[`SortableTable component test should render the table 1`] = `
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
               >
-                <span>
+                <strong>
                   Eclair
-                </span>
+                </strong>
               </td>
               <td
                 class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
@@ -162,6 +162,180 @@ exports[`SortableTable component test should render the table 1`] = `
               >
                 <span>
                   98
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SortableTable component test should sort the table data 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-8atqhb"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1mxz8qt-MuiPaper-root"
+    >
+      <div
+        class="MuiTableContainer-root css-vq2emh-MuiTableContainer-root"
+      >
+        <table
+          aria-labelledby="tableTitle"
+          class="MuiTable-root MuiTable-stickyHeader css-h6w51p-MuiTable-root"
+        >
+          <thead
+            class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+          >
+            <tr
+              class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+            >
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                scope="col"
+              >
+                <span
+                  class="text-gray-600 text-center"
+                >
+                  Dessert
+                </span>
+              </th>
+              <th
+                aria-sort="descending"
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                scope="col"
+              >
+                <span
+                  class="MuiButtonBase-root MuiTableSortLabel-root Mui-active css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="text-gray-600 text-center"
+                  >
+                    Calories
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionDesc css-3l415a-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                    data-testid="ArrowDownwardIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </th>
+              <th
+                class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                scope="col"
+              >
+                <span
+                  class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="text-gray-600 text-center"
+                  >
+                    Fat (g)
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                    data-testid="ArrowDownwardIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                    />
+                  </svg>
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+          >
+            <tr
+              class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+              >
+                <strong>
+                  Eclair
+                </strong>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+              >
+                <span>
+                  235
+                </span>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+              >
+                <span>
+                  98
+                </span>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+              >
+                <strong>
+                  Ice cream
+                </strong>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+              >
+                <span>
+                  180
+                </span>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+              >
+                <span>
+                  97
+                </span>
+              </td>
+            </tr>
+            <tr
+              class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+            >
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+              >
+                <strong>
+                  Frozen yoghurt
+                </strong>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+              >
+                <span>
+                  100
+                </span>
+              </td>
+              <td
+                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+              >
+                <span>
+                  80
                 </span>
               </td>
             </tr>

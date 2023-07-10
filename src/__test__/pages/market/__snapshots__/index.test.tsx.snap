@@ -1,0 +1,970 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Market Page should render Market Page 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="container max-w-screen-xl mx-auto my-10 lg:px-10 px-4"
+    >
+      <h1
+        class="text-3xl font-bold text-black-500 my-8"
+      >
+        Harga Crypto dalam Rupiah Hari Ini
+      </h1>
+      <div
+        class="hidden md:block"
+      >
+        <div
+          class="MuiBox-root css-8atqhb"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1mxz8qt-MuiPaper-root"
+          >
+            <div
+              class="MuiTableContainer-root css-vq2emh-MuiTableContainer-root"
+            >
+              <table
+                aria-labelledby="tableTitle"
+                class="MuiTable-root MuiTable-stickyHeader css-h6w51p-MuiTable-root"
+              >
+                <thead
+                  class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                >
+                  <tr
+                    class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="text-gray-600 text-center"
+                      />
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="text-gray-600 text-center"
+                      >
+                        CRYPTO
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span
+                          class="text-gray-600 text-center"
+                        >
+                          HARGA
+                        </span>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                          />
+                        </svg>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span
+                          class="text-gray-600 text-center"
+                        >
+                          24 JAM
+                        </span>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                          />
+                        </svg>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span
+                          class="text-gray-600 text-center"
+                        >
+                          1 MGG
+                        </span>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                          />
+                        </svg>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span
+                          class="text-gray-600 text-center"
+                        >
+                          1 BLN
+                        </span>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                          />
+                        </svg>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="MuiButtonBase-root MuiTableSortLabel-root css-1qgma8u-MuiButtonBase-root-MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <span
+                          class="text-gray-600 text-center"
+                        >
+                          1 THN
+                        </span>
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-1vweko9-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                          data-testid="ArrowDownwardIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                          />
+                        </svg>
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                >
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ejzaja-MuiTableCell-root"
+                    >
+                      <div
+                        class="w-8 h-8"
+                        style="color: rgb(247, 139, 26);"
+                      />
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col lg:flex-row "
+                      >
+                        <div
+                          class="basis-3/4 font-bold"
+                        >
+                           
+                          Bitcoin
+                           
+                        </div>
+                        <div
+                          class="text-slate-400"
+                        >
+                          BTC
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+                    >
+                      <span
+                        class="text-black-600 transition-color duration-1000 font-bold"
+                      >
+                        Rp 10.268
+                      </span>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          4.84
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          7.39
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          7.64
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          24.52
+                          %
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ejzaja-MuiTableCell-root"
+                    >
+                      <div
+                        class="w-8 h-8"
+                        style="color: rgb(144, 17, 254);"
+                      />
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col lg:flex-row "
+                      >
+                        <div
+                          class="basis-3/4 font-bold"
+                        >
+                           
+                          Ethereum
+                           
+                        </div>
+                        <div
+                          class="text-slate-400"
+                        >
+                          ETH
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+                    >
+                      <span
+                        class="text-black-600 transition-color duration-1000 font-bold"
+                      >
+                        Rp 21.904
+                      </span>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          0.89
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          8.15
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          5.24
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          54.2
+                          %
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ejzaja-MuiTableCell-root"
+                    >
+                      <div
+                        class="w-8 h-8"
+                        style="color: rgb(21, 165, 124);"
+                      />
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col lg:flex-row "
+                      >
+                        <div
+                          class="basis-3/4 font-bold"
+                        >
+                           
+                          Tether
+                           
+                        </div>
+                        <div
+                          class="text-slate-400"
+                        >
+                          USDT
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+                    >
+                      <span
+                        class="text-black-600 transition-color duration-1000 font-bold"
+                      >
+                        Rp 28.825.405
+                      </span>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                        />
+                        <span
+                          class="font-semibold text-green-600"
+                        >
+                          0.09
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                        />
+                        <span
+                          class="font-semibold text-green-600"
+                        >
+                          1.32
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                        />
+                        <span
+                          class="font-semibold text-green-600"
+                        >
+                          0.95
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                        />
+                        <span
+                          class="font-semibold text-green-600"
+                        >
+                          11
+                          %
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-ejzaja-MuiTableCell-root"
+                    >
+                      <div
+                        class="w-8 h-8"
+                        style="color: rgb(254, 191, 17);"
+                      />
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col lg:flex-row "
+                      >
+                        <div
+                          class="basis-3/4 font-bold"
+                        >
+                           
+                          Binance Coin
+                           
+                        </div>
+                        <div
+                          class="text-slate-400"
+                        >
+                          BNB
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-cfxck-MuiTableCell-root"
+                    >
+                      <span
+                        class="text-black-600 transition-color duration-1000 font-bold"
+                      >
+                        Rp 104.711.228
+                      </span>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          3.15
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                        />
+                        <span
+                          class="font-semibold text-red-600"
+                        >
+                          4.57
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                        />
+                        <span
+                          class="font-semibold text-green-600"
+                        >
+                          18.85
+                          %
+                        </span>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-2"
+                      >
+                        <div
+                          class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                        />
+                        <span
+                          class="font-semibold text-green-600"
+                        >
+                          7.83
+                          %
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="md:hidden"
+      >
+        <div
+          class="MuiBox-root css-8atqhb"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1mxz8qt-MuiPaper-root"
+          >
+            <div
+              class="MuiTableContainer-root css-vq2emh-MuiTableContainer-root"
+            >
+              <table
+                aria-labelledby="tableTitle"
+                class="MuiTable-root MuiTable-stickyHeader css-xn82ks-MuiTable-root"
+              >
+                <thead
+                  class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                >
+                  <tr
+                    class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-10sdfzr-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <span
+                        class="text-gray-600 text-center"
+                      >
+                        CRYPTO
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignRight MuiTableCell-sizeMedium css-pplbz6-MuiTableCell-root"
+                      scope="col"
+                    >
+                      <div
+                        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+                      >
+                        <div
+                          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                        >
+                          <div
+                            aria-expanded="false"
+                            aria-haspopup="listbox"
+                            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                            role="button"
+                            tabindex="0"
+                          >
+                            24 JAM
+                          </div>
+                          <input
+                            aria-hidden="true"
+                            aria-invalid="false"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                            tabindex="-1"
+                            value="day"
+                          />
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M7 10l5 5 5-5z"
+                            />
+                          </svg>
+                          <fieldset
+                            aria-hidden="true"
+                            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                          >
+                            <legend
+                              class="css-ihdtdm"
+                            >
+                              <span
+                                class="notranslate"
+                              >
+                                ​
+                              </span>
+                            </legend>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                >
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-4"
+                      >
+                        <div
+                          class="w-8 h-8"
+                          style="color: rgb(247, 139, 26);"
+                        />
+                        <div
+                          class="flex flex-col"
+                        >
+                          <div
+                            class="basis-3/4 font-bold"
+                          >
+                             
+                            Bitcoin
+                             
+                          </div>
+                          <div
+                            class="text-slate-400"
+                          >
+                            BTC
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1jlhf0h-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col items-end"
+                      >
+                        <span
+                          class="text-black-600 transition-color duration-1000 font-bold"
+                        >
+                          Rp 10.268
+                        </span>
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div
+                            class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                          />
+                          <span
+                            class="font-semibold text-red-600"
+                          >
+                            4.84
+                            %
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-4"
+                      >
+                        <div
+                          class="w-8 h-8"
+                          style="color: rgb(144, 17, 254);"
+                        />
+                        <div
+                          class="flex flex-col"
+                        >
+                          <div
+                            class="basis-3/4 font-bold"
+                          >
+                             
+                            Ethereum
+                             
+                          </div>
+                          <div
+                            class="text-slate-400"
+                          >
+                            ETH
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1jlhf0h-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col items-end"
+                      >
+                        <span
+                          class="text-black-600 transition-color duration-1000 font-bold"
+                        >
+                          Rp 21.904
+                        </span>
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div
+                            class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                          />
+                          <span
+                            class="font-semibold text-red-600"
+                          >
+                            0.89
+                            %
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-4"
+                      >
+                        <div
+                          class="w-8 h-8"
+                          style="color: rgb(21, 165, 124);"
+                        />
+                        <div
+                          class="flex flex-col"
+                        >
+                          <div
+                            class="basis-3/4 font-bold"
+                          >
+                             
+                            Tether
+                             
+                          </div>
+                          <div
+                            class="text-slate-400"
+                          >
+                            USDT
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1jlhf0h-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col items-end"
+                      >
+                        <span
+                          class="text-black-600 transition-color duration-1000 font-bold"
+                        >
+                          Rp 28.825.405
+                        </span>
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div
+                            class="h-0 w-0 border-x-8 border-x-transparent border-b-8 border-b-green-600"
+                          />
+                          <span
+                            class="font-semibold text-green-600"
+                          >
+                            0.09
+                            %
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root css-1q1u3t4-MuiTableRow-root"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft MuiTableCell-sizeMedium css-inzptt-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex items-center gap-4"
+                      >
+                        <div
+                          class="w-8 h-8"
+                          style="color: rgb(254, 191, 17);"
+                        />
+                        <div
+                          class="flex flex-col"
+                        >
+                          <div
+                            class="basis-3/4 font-bold"
+                          >
+                             
+                            Binance Coin
+                             
+                          </div>
+                          <div
+                            class="text-slate-400"
+                          >
+                            BNB
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-1jlhf0h-MuiTableCell-root"
+                    >
+                      <div
+                        class="flex flex-col items-end"
+                      >
+                        <span
+                          class="text-black-600 transition-color duration-1000 font-bold"
+                        >
+                          Rp 104.711.228
+                        </span>
+                        <div
+                          class="flex items-center gap-2"
+                        >
+                          <div
+                            class="h-0 w-0 border-x-8 border-x-transparent border-t-8 border-t-red-600"
+                          />
+                          <span
+                            class="font-semibold text-red-600"
+                          >
+                            3.15
+                            %
+                          </span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
