@@ -8,7 +8,7 @@
     "@mui/base": "^5.0.0-beta.6",
     "@mui/material": "^5.13.7",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.38",
@@ -23,18 +23,20 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.3.2",
+    "ts-jest": "^29.1.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{ts,tsx,css,md,json}' --config ./.prettierrc",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -59,10 +61,13 @@
     "@typescript-eslint/parser": "^5.61.0",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jest": "^27.2.2",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
+    "jest": "^29.6.1",
+    "jest-environment-jsdom": "^29.6.1",
     "lint-staged": "^13.2.3",
     "prettier": "^2.4.1"
   },
