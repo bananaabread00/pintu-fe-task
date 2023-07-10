@@ -17,9 +17,14 @@ export interface EnhancedSortableTableProps<T> {
   headCells: HeadCell<T>[];
 }
 
+export type dropdownList = {
+  key: string;
+  label: string;
+};
+
 export interface EnhancedDropdownTableProps<T> {
   headCells: HeadCell<T>[];
-  dropdownList: Record<string | number, string>[];
+  dropdownList: dropdownList[];
   onSelectionChange: (obj: any) => void;
 }
 
@@ -31,6 +36,6 @@ export interface SortableTableProps<T> {
 export interface DropdownTableProps<T> {
   headCells: HeadCell<T>[];
   tableData: T[];
-  dropdownList: Record<string | number, string>[];
+  dropdownList: dropdownList[];
   onSelectionChange: (obj: any) => void;
 }
