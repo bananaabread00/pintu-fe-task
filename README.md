@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# Pintu FE Candidate Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo link:
 
-## Available Scripts
+Access my site at [pintu-fe-task.vercel.app/market](https://pintu-fe-task.vercel.app/market)
 
-In the project directory, you can run:
+## Full Documentation:
 
-### `npm start`
+Read full documentation for deeper explanation about the app design and technology usage here:
+https://docs.google.com/document/d/124Lf9AGvE1jUbNWZabioBsPFNNP7ZAHtUHWAiiBAydU/edit?usp=sharing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Content:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [About The App](#about-the-app)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Improvement Opportunities](#improvement)
 
-### `npm test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is built as part of Frontend Web Engineer candidate test in Pintu. In general, it's a replication from [Pintu market site](https://pintu.co.id/market) with focus on the token list feature. Users can view a table containing a list of tokens available in Pintu site. The table provides sorting options based on price and price changes over different time frames such as day, week, month, and year. Additionally, there is a prominent section above the table showcasing the top 6 tokens that have experienced the most significant price changes in the past 24 hours. This app has support for mobile view and good responsiveness as well.
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Dekstop
+  ![Market Dekstop](/docs/screenshots/market_dekstop.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Mobile
+  ![Market Mobile](/docs/screenshots/market_mobile.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies
 
-### `npm run eject`
+**Main Stacks**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- React 18
+- Typescript
+- Tailwind CSS
+- Material UI
+- Axios
+- react-query
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Supporting Utils**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Eslint
+- Prettier
+- Husky (for pre-commit)
+- Storybook
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Testing**
 
-## Learn More
+- Jest
+- React testing library
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Deployment**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Vercel
+
+**Backend**
+
+- [Cors-anywhere](https://www.npmjs.com/package/cors-anywhere) in separate repo: https://github.com/bananaabread00/node-cors-proxy
+
+## Setup
+
+- Download or clone this repository
+- Run `npm install` to install all depedencies
+- To run the app in development mode, run `npm start`.
+  Then open `http://localhost:3000` to view it in the browser.
+- To build the app, run `npm run build`.
+  The build result can be found in `/build` folder.
+- To run the test suites, run `npm run test`.
+  The coverage file can be found in `/coverage` folder.
+- To view the storybook, run `npm run storybook`.
+  Then open `http://localhost:6006/?path=/docs` to view it in the browser.
+
+## Improvement Opportunities
+
+- Utilize caching and prefetch (can use react-query as well) to make the data fetching more efficient. Especially for fetching token logos now I still call the s3 url for each token everytime the page is being reloaded.
+- Consider adding pagination for the token list table to help reduce the amount of data that needs to be fetched and displayed, especially if the token list amount continues growing. This approach also optimizes performance and ensures that the table remains responsive and user-friendly, even when dealing with a large dataset.
+- Consider modifying the price-changes API to only send changed data to reduce size of payload data.
+- Consider using web-sockets for real time data updates between FE and BE, so BE will notify FE for every data change without periodic API calls.
